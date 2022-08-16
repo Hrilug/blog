@@ -56,7 +56,7 @@
     <div class="content">
       <div class="introduce">
         <div class="introduce-text">
-          <h2 style="color: rgb(255, 123, 0); text-align: center" >
+          <h2 style="color: rgb(255, 123, 0); text-align: center">
             WELCOME TO MY WEBSITE
           </h2>
           <hr />
@@ -79,40 +79,64 @@
         <div class="introduce-img"></div>
       </div>
       <div class="quote" id="quoteDisplay"></div>
+      <script>
+        var quotes = [
+          '林言林语：“我就知道，别人不挑剩下的也不给我。”',
+          '林言林语：“也亏你倒听他的话。我平日和你说的，全当耳旁风，怎么他说了你就依，比圣旨还快些！”',
+          '林言林语：“什么臭男人拿的！我不要他。”',
+          '林言林语：“蠢才，蠢才！你有玉，人家就有金来配你；人家有‘冷香’，你就没有‘暖香’去配？”',
+          '林言林语：“我说呢，亏在那里绊住，不然早就飞了来了。”',
+          '林言林语：“我原是给你们取笑儿的，拿着我比戏子。”',
+          '林言林语：“你说你会过目成诵，难道我就不能一目十行么？”',
+          '林言林语：“我不困，只略歇歇儿，你且别处去闹会子再来。”',
+          '林言林语：“谁叫你送来的？难为她费心，那里就冻死我了！”',
+          '林言林语：“你还要比？你还要笑？你不比不笑，比人比了笑了还厉害呢！”',
+          '林言林语：“啐！我道是谁，原来是这个狠心短命的……”',
+          '林言林语：“何曾不是在屋里的，只因听见天上一声叫唤，出来瞧了瞧，原来是个呆雁。”',
+          '林言林语：“他在别的还有限，惟有这些人带的东西上越发留心。”',
+          '林言林语：“你们瞧瞧，孙行者来了。他一般的也拿着雪褂子，故意装出个小骚达子来。”',
+          '林言林语：“是单送我一个人的，还是别的姑娘们都有呢？”',
+          '林言林语：“早知他来，我就不来了。”',
+          '林言林语：“我就知道，别人不挑剩下的也不给我。”',
+          '林言林语：“今儿得罪了我事小，明儿什么宝姑娘来，什么贝姑娘来，都得罪了，这事岂不大了？”',
+          '林言林语：“你这该死的胡说！好好儿的把这淫词艳曲弄了来，说这些混话欺负我。我告诉舅舅舅母去。”',
+        ]
+        document.getElementById('quoteDisplay').innerHTML = quotes[parseInt(Math.round(Math.random() * 18 + 1))];
+      </script>
     </div>
   </div>
-  
+
   <div>
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-  <script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <script>
       L2Dwidget.init({
-          "model": {
-              jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
-              "scale": 1
-          },
-          "display": {
-              "position": "left",//设置看板娘的上下左右位置
-              "width": 90,
-              "height": 120,
-              "hOffset": 0,
-              "vOffset": 0
-          },
-          "mobile": {
-              "show": true,
-              "scale": 0.5
-          },
-          "react": {
-              "opacityDefault": 1,//设置透明度
-              "opacityOnHover": 0.4
-          }
+        "model": {
+          jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
+          "scale": 1
+        },
+        "display": {
+          "position": "left",//设置看板娘的上下左右位置
+          "width": 90,
+          "height": 120,
+          "hOffset": 0,
+          "vOffset": 0
+        },
+        "mobile": {
+          "show": true,
+          "scale": 0.5
+        },
+        "react": {
+          "opacityDefault": 1,//设置透明度
+          "opacityOnHover": 0.4
+        }
       });
       window.onload = function () {
-          $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.7; left: 100px; bottom: 0px; z-index: 1; pointer-events: none;")
+        $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.7; left: 100px; bottom: 0px; z-index: 0; pointer-events: none;")
       }
-  </script>
+    </script>
   </div>
-  
+
   <div class="project" id="project">
     <div class="content">
       <h1 style="color: white">我的项目</h1>
@@ -234,4 +258,5 @@
     </div>
   </div>
 </body>
+
 </html>
