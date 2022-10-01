@@ -163,7 +163,7 @@
 }
 
 .main {
-    background: url('../images/main.jpg');
+    background: url('../images/1.jpg');
     background-size: cover;
     width: 100%;
     height: calc(100vh);
@@ -204,7 +204,7 @@
 }
 
 .project {
-    background: url('../images/project.jpg');
+    background: url('../images/2.jpg');
     background-size: cover;
     width: 100%;
     height: calc(100vh);
@@ -240,7 +240,7 @@
 }
 
 .donate {
-    background: url('../images/donate.jpg');
+    background: url('../images/3.jpg');
     background-size: cover;
     width: 100%;
     height: calc(100vh);
@@ -280,7 +280,7 @@
 }
 
 .about {
-    background: url('../images/about.jpg');
+    background: url('../images/4.jpg');
     background-size: cover;
     width: 100%;
     height: calc(100vh);
