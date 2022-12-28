@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Hrilug的博客</title>
+    <link rel="shortcut icon" href="images/html-head.png">
+    <link href="css/blog.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="bg">
+    <div class="box">
+        <div class="items">
+            <div class="items-icon"><img src="images/head.png" /></div>
+            <div class="items-con">你好呀!</div>
+        </div>
+
+        <div class="center">
+            <div class="line"></div>
+        </div>
+
+        <div class="menu">
+            <ul class="menu-ul">
+                <li>
+                    <div class="light"></div>
+                    <div class="icon"><img src="images/main-icon.png" width="50px" hight="50px" /></div>
+                    <div class="con">主页</div>
+                </li>
+
+                <li>
+                    <div class="light"></div>
+                    <div class="icon"><img src="images/individual-icon.png" width="50px" hight="50px" /></div>
+                    <div class="con">个人</div>
+                </li>
+
+                <li>
+                    <div class="light"></div>
+                    <div class="icon"><img src="images/project-icon.png" width="50px" hight="50px" /></div>
+                    <div class="con">项目</div>
+                </li>
+
+                <li>
+                    <div class="light"></div>
+                    <div class="icon"><img src="images/about-icon.png" width="50px" hight="50px" /></div>
+                    <div class="con">关于</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tab_con">
+        <div class="item" style="display: block;">
+            <div class="main" id="main">
+                <div class="content">
+                    <div class="introduce">
+                        <div class="introduce-text">
+                            <h1 style="color: rgb(255, 123, 0); text-align: center">
+                                WELCOME TO MY WEBSITE
+                            </h1>
+                            <hr />
+                            <p>
+                                你好，我是本网站的主人——黄瑞龙
+                            </p>
+                            <p>
+                                我来自NB的寿县一中
+                            </p>
+                            <p>
+                                本人作为电子开发和程序爱好者，出于学习目的开设本站
+                            </p>
+                            <p>
+                                祝你浏览愉快!
+                            </p>
+                            <p>
+                                (建议使用PC端或横屏操作)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="quote" id="quoteDisplay"></div>
+                    <script>
+                        var quotes = [
+                            '林言林语：“我就知道，别人不挑剩下的也不给我。”',
+                            '林言林语：“也亏你倒听他的话。我平日和你说的，全当耳旁风，怎么他说了你就依，比圣旨还快些！”',
+                            '林言林语：“什么臭男人拿的！我不要他。”',
+                            '林言林语：“蠢才，蠢才！你有玉，人家就有金来配你；人家有‘冷香’，你就没有‘暖香’去配？”',
+                            '林言林语：“我说呢，亏在那里绊住，不然早就飞了来了。”',
+                            '林言林语：“我原是给你们取笑儿的，拿着我比戏子。”',
+                            '林言林语：“你说你会过目成诵，难道我就不能一目十行么？”',
+                            '林言林语：“我不困，只略歇歇儿，你且别处去闹会子再来。”',
+                            '林言林语：“谁叫你送来的？难为她费心，那里就冻死我了！”',
+                            '林言林语：“你还要比？你还要笑？你不比不笑，比人比了笑了还厉害呢！”',
+                            '林言林语：“啐！我道是谁，原来是这个狠心短命的……”',
+                            '林言林语：“何曾不是在屋里的，只因听见天上一声叫唤，出来瞧了瞧，原来是个呆雁。”',
+                            '林言林语：“他在别的还有限，惟有这些人带的东西上越发留心。”',
+                            '林言林语：“你们瞧瞧，孙行者来了。他一般的也拿着雪褂子，故意装出个小骚达子来。”',
+                            '林言林语：“是单送我一个人的，还是别的姑娘们都有呢？”',
+                            '林言林语：“早知他来，我就不来了。”',
+                            '林言林语：“我就知道，别人不挑剩下的也不给我。”',
+                            '林言林语：“今儿得罪了我事小，明儿什么宝姑娘来，什么贝姑娘来，都得罪了，这事岂不大了？”',
+                            '林言林语：“你这该死的胡说！好好儿的把这淫词艳曲弄了来，说这些混话欺负我。我告诉舅舅舅母去。”',
+                        ]
+                        document.getElementById('quoteDisplay').innerHTML = quotes[parseInt(Math.round(Math.random() * 18 + 1))];
+                    </script>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+            <script>
+              L2Dwidget.init({
+                "model": {
+                  jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
+                  "scale": 1
+                },
+                "display": {
+                  "position": "right",//设置看板娘的上下左右位置
+                  "width": 90,
+                  "height": 120,
+                  "hOffset": 0,
+                  "vOffset": 0
+                },
+                "mobile": {
+                  "show": true,
+                  "scale": 0.5
+                },
+                "react": {
+                  "opacityDefault": 10,//设置透明度
+                  "opacityOnHover": 1
+                }
+              });
+              window.onload = function () {
+                $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.8; right: 100px; bottom: 0px; z-index: 1; pointer-events: none;")
+              }
+            </script>
+          </div>
+
+        <div class="item">
+            <div class="individual" id="individual">
+                <div class="content">
+                  <div class="individual-box">
+                    <h2 style="color: rgb(255, 123, 0)">关于我 ABOUT ME</h2>
+                    <hr/>
+                    <div class="individual-div">
+                      <h2>
+                      &nbsp&nbsp你好，我目前是一名高中生，理工男，一名电子发烧者和程序爱好者，喜欢书籍和音乐。喜欢享受生活的村上春树、幽默留给自己的余华、物哀写尽的川端康成，我喜欢SamSmith、LinkinPark、ImagineDragons、milit...你知道林言林语么，看看《红楼梦》吧。
+                      </h2>
+                      <h2>
+                      &nbsp&nbsp我个人学习近六年C语言，和四年的PYTHON，HTML开发近四年，这是我写的第二个网站。我是一名电子发爱好者，通过Arduino入门已有七年，学习过三年51MOS(STC89)，ESP32(esp8266,esp32dev)，STM32(stm32f103)，我已能够熟练开发大部分Arduino下atmega系列MCU，stm32f1系列MCU，能够独立完成项目包括部分PCB绘制设计。同时，个人学习过相当的linux，玩过树莓派和Ubuntu，本网站搭建在Ubuntu16系统上
+                      </h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="item">
+            <div class="project" id="project">
+                <div class="content">
+                  <div class="cpp">
+                    <h2 style="color: rgb(255, 123, 0)">我的项目 MY PROJECT</h2>
+                    <hr/>
+
+                    <a href="https://blog.csdn.net/Hrilug">
+                      <div>
+                        <img src="images/blog.png" width="120px" height="120px" /><br />
+                        <p3>博客</p3>
+                      </div>
+                    </a>
+                    <a href="https://github.com/Hrilug">
+                      <div>
+                        <img src="images/github.png" width="120px" height="120px" /><br />
+                        <p3>GITHUB</p3>
+                      </div>
+                    </a>
+                    <a href="https://gitee.com/hrilug">
+                      <div>
+                        <img src="images/gitee.png" width="120px" height="120px" /><br />
+                        <p3>GITEE</p3>
+                      </div>
+                    </a>
+                    <a href="lan.html">
+                      <div>
+                        <img src="images/lan.png" width="120px" height="120px" /><br />
+                        <p3>物联网</p3>
+                      </div>
+                    </a>
+                    <a href="project.html">
+                      <div>
+                        <img src="images/arduino.png" width="120px" height="120px" /><br />
+                        <p3>电子开发</p3>
+                      </div>
+                    </a>
+                    <a href="game.html">
+                      <div>
+                        <img src="images/game.png" width="120px" height="120px" /><br />
+                        <p3>游戏</p3>
+                      </div>
+                    </a>
+                    <a href="building.html">
+                      <div>
+                        <img src="images/driver.png" width="120px" height="120px" /><br />
+                        <p3>网盘</p3>
+                      </div>
+                    </a>
+                    <a href="building.html">
+                      <div>
+                        <img src="images/picture.png" width="120px" height="120px" /><br />
+                        <p3>图库</p3>
+                      </div>
+                    </a>
+                </div>
+            </div>
+          </div>            
+        </div>
+
+        <div class="item">
+            <div class="about" id="about">
+                <div class="content">
+                  <h2 style="color: rgb(255, 123, 0)">怎么，想要联系我？</h2>
+                  <hr />
+                  <h2 >给我留言:</h2>
+                  <div class="message">
+                    <form action="message.php" method="post">
+                      <div>
+                        <div>
+                          <h3>昵称:</h3>
+                        </div>
+                        <div>
+                          <input class="input-sm" type="text" name="nickname" style="color: rgb(0, 0, 0)" />
+                        </div>
+                        <div>
+                          <h3>联系方式:</h3>
+                        </div>
+                        <div>
+                          <input class="input-sm" type="text" name="connect" style="color: rgb(0, 0, 0)" />
+                        </div>
+                      </div>
+                      <div>
+                        <div>
+                          <h3>信息:</h3>
+                        </div>
+                        <div>
+                          <textarea class="input-la" type="text" name="message" style="color: rgb(0, 0, 0)"></textarea>
+                        </div>
+                        <div>
+                          <input class="input-button" type="submit" value="发送" />
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <hr />
+                  <p class="about-text">
+                    <a href="https://github.com/Hrilug">Github:hrilug</a>
+                    <a href="https://space.bilibili.com/446239628?spm_id_from=333.337.0.0">哔哩哔哩:hrilug</a>
+                    <a href="mailto:someone@microsoft.com?subject=Hello%20again">QQ邮箱:hrilug@qq.com</a>
+                  </p>
+                </div>
+              </div>
+        </div>
+    </div>
+
+    <script src="js/tab.js"></script>    
+</body>
+
+</html>

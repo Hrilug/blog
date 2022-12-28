@@ -239,6 +239,7 @@
 individual-div{
     position: relative;
 }
+
 .individual-div h2{
     color:rgba(255, 255, 255, 0.76);
     font-family: "楷体";
@@ -261,6 +262,7 @@ individual-div{
     position: relative;
     border-radius: 15px 15px 15px 15px;
 }
+
 .cpp h1{
     color: white;
     top:10px;
