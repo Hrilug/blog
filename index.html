@@ -27,17 +27,17 @@
         </li>
         <br />
 
+        <li onclick="javascript:document.getElementById('individual').scrollIntoView({behavior:'smooth' })">
+          <div class="light"></div>
+          <div class="icon"><img src="images/individual-icon.png" width="50px" hight="50px" /></div>
+          <div class="con">个人</div>
+        </li>
+        <br />
+
         <li onclick="javascript:document.getElementById('project').scrollIntoView({behavior:'smooth' })">
           <div class="light"></div>
           <div class="icon"><img src="images/project-icon.png" width="45px" hight="45px" /></div>
           <div class="con">项目</div>
-        </li>
-        <br />
-
-        <li onclick="javascript:document.getElementById('donate').scrollIntoView({behavior:'smooth' })">
-          <div class="light"></div>
-          <div class="icon"><img src="images/donate-icon.png" width="50px" hight="50px" /></div>
-          <div class="con">赞助</div>
         </li>
         <br />
 
@@ -56,9 +56,9 @@
     <div class="content">
       <div class="introduce">
         <div class="introduce-text">
-          <h2 style="color: rgb(255, 123, 0); text-align: center">
+          <h1 style="color: rgb(255, 123, 0); text-align: center">
             WELCOME TO MY WEBSITE
-          </h2>
+          </h1>
           <hr />
           <p>
             你好，我是本网站的主人——黄瑞龙
@@ -137,11 +137,28 @@
     </script>
   </div>
 
+  <div class="individual" id="individual">
+    <div class="content">
+      <div class="individual-box">
+        <h1>&nbsp&nbsp关于我 ABOUT ME</h1>
+        <div class="individual-line"></div>
+        <div class="individual-div">
+          <h2>
+          &nbsp&nbsp你好，我目前是一名高中生，理工男，一名电子发烧者和程序爱好者，喜欢书籍和音乐。喜欢享受生活的春上春树、幽默留给自己的余华、物哀写尽的川端康成，我喜欢SamSmith、LinkinPark、ImagineDragons、milit...你知道林言林语么，看看《红楼梦》吧。
+          </h2>
+          <h2>
+          &nbsp&nbsp我个人学习近六年C语言，和四年的PYTHON，HTML开发近四年，这是我写的第二个网站。我是一名电子发爱好者，通过Arduino入门已有七年，学习过三年51MOS(STC89)，ESP32(esp8266,esp32dev)，STM32(stm32f103)，我已能够熟练开发大部分Arduino下atmega系列MCU，stm32f1系列MCU，能够独立完成项目包括部分PCB绘制设计。同时，个人学习过相当的linux，玩过树莓派和Ubuntu，本网站搭建在Ubuntu16系统上
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="project" id="project">
     <div class="content">
-      <h1 style="color: white">我的项目</h1>
-      <hr />
       <div class="cpp">
+        <h1>&nbsp&nbsp我的项目 MY PROJECT</h1>
+      <div class="cpp-line"></div>
         <a href="https://blog.csdn.net/Hrilug">
           <div>
             <img src="images/blog.png" width="120px" height="120px" /><br />
@@ -153,7 +170,7 @@
             <img src="images/github.png" width="120px" height="120px" /><br />
             <p3>GITHUB</p3>
           </div>
-        </a>        
+        </a>
         <a href="https://gitee.com/hrilug">
           <div>
             <img src="images/gitee.png" width="120px" height="120px" /><br />
@@ -198,24 +215,6 @@
         </a>
 
 
-      </div>
-    </div>
-  </div>
-
-  <div class="donate" id="donate">
-    <div class="content">
-      <img src="images/money.png" style="float: left" />
-      <h1 class="donate-text">捐赠？老板大气！</h1>
-      <hr />
-      <div class="donate-div">
-        <div class="qr-code">
-          <h2>支付宝支付</h2>
-          <img src="images/alipay.jpg" />
-        </div>
-        <div class="qr-code">
-          <h2>微信支付</h2>
-          <img src="images/weixin.jpg" />
-        </div>
       </div>
     </div>
   </div>

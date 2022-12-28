@@ -137,7 +137,7 @@
 .content {
     left: 14%;
     right: 7%;
-    top: 8%;
+    top: 6%;
     height: 90%;
     position: absolute;
 }
@@ -145,7 +145,7 @@
     text-align: center;
     font-size: 18px;
     height: auto;
-    width: 80%;
+    width: 85%;
     margin-top:2%;
     margin-left: 8%;
     margin-right: 8%;
@@ -172,7 +172,7 @@
 }
 
 .introduce {
-    width: 80%;
+    width: 85%;
     height: 80%;
     margin-left: 8%;
     margin-right: 8%;
@@ -191,7 +191,7 @@
 .introduce-text p{
     color:white;
     text-align: center;
-    font-size: large;
+    font-size:larger;
 }
 
 .introduce-img {
@@ -203,8 +203,49 @@
     overflow: hidden;
 }
 
-.project {
+.individual{
     background: url('../images/2.jpg');
+    background-size:cover;
+    width: 100%;
+    height: calc(100vh);
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.individual-box{
+    width: 100%;
+    height: 95%;
+    background-color: #455d7a;
+    opacity: 0.7;
+    position: relative;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.individual-box h1{
+    top:10px;
+    color:white;
+    position: relative;
+}
+
+.individual-line{
+    background-color: aliceblue;
+    height: 3px;
+    top:10px;
+    margin:8px;
+    position: relative;
+    
+}
+
+individual-div{
+    position: relative;
+}
+.individual-div h2{
+    color:rgba(255, 255, 255, 0.76);
+    font-family: "楷体";
+}
+
+.project {
+    background: url('../images/3.jpg');
     background-size: cover;
     width: 100%;
     height: calc(100vh);
@@ -213,13 +254,25 @@
 }
 
 .cpp {
-
     width: 100%;
-    height: 80%;
+    height: 95%;
     background-color: #36506c;
-    opacity: 0.6;
+    opacity: 0.7;
     position: relative;
     border-radius: 15px 15px 15px 15px;
+}
+.cpp h1{
+    color: white;
+    top:10px;
+    position: relative;
+}
+.cpp-line{
+    background-color: aliceblue;
+    height: 3px;
+    top:10px;
+    margin:8px;
+    position: relative;
+    
 }
 
 .cpp a div {
@@ -236,46 +289,6 @@
     width: 150px;
     height: 150px;
     background-color: rgb(95, 95, 95);
-
-}
-
-.donate {
-    background: url('../images/3.jpg');
-    background-size: cover;
-    width: 100%;
-    height: calc(100vh);
-    background-repeat: no-repeat;
-    position: relative;
-}
-
-.donate-div {
-    position: relative;
-}
-
-.donate-text {
-    color: white;
-    margin: 5px;
-}
-
-.qr-code {
-    width: 250px;
-    height: 350px;
-    background-color: #36506c;
-    opacity: 0.8;
-    margin: 20px;
-    float: left;
-    border-radius: 10px 10px 10px 10px;
-}
-
-.qr-code h2 {
-    color: white;
-    text-align: center;
-    margin: 5px;
-}
-
-.qr-code img {
-    width: 250px;
-    height: 290px;
 
 }
 
