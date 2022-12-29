@@ -23,7 +23,7 @@ else
     {
         echo "发送成功，博主很快就会看到哦";
         mysqli_close($con);
-        header("refresh:2;url=http://www.hrilug.xyz#about");
+        header("refresh:2;url=http://www.hrilug.xyz");
     }
 }
 ?>
