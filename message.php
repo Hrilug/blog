@@ -1,9 +1,9 @@
 <?php
-$con = mysqli_connect('localhost','root','hrilug');
+$con = mysqli_connect('139.196.253.115','root','Huangruilong10.3','hrilug');
 if(!$con)
 {
     echo "未连接数据库";
-    header("refresh:2;url=http://www.hrilug.xyz");
+    header("refresh:2;url=http://www.hrilug.com");
 }
 else
 {  
@@ -18,7 +18,7 @@ else
     {
         echo "发送成功，博主很快就会看到哦（该页面自动跳转）";
         mysqli_close($con);
-        header("refresh:2;url=http://www.hrilug.xyz");
+        header("refresh:2;url=http://www.hrilug.com");
     }
 }
 ?>
