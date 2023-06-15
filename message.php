@@ -11,7 +11,7 @@ else
     $sql="insert into message(nickname,connect,message) values ('$_POST[nickname]','$_POST[connect]', '$_POST[message]')";
 
     if(!mysqli_query($con, $sql))
-    {
+    { 
         die('Error:'.mysqli_error($con));
     }
     else
