@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect('139.196.253.115','root','Huangruilong10.3','hrilug');
+$con = mysqli_connect('139.196.253.115','root','Huangruilong10.3');
 if(!$con)
 {
     echo "未连接数据库";
