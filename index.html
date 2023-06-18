@@ -1,22 +1,50 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
   <title>Hrilug的博客</title>
   <meta name=“hrilug” content=“hrilug的博客” />
   <link rel="shortcut icon" href="images/html-head.png">
   <link href="css/blog.css" rel="stylesheet" type="text/css" />
-  <script type="text/javascript"> 
-    if(document.body.scrollWidth < document.body.scrollheight-200){
-      document.getElementsByClassName(box).style.display='none';
 
-    }
-</script>
 </head>
 
+<div id="live">
+  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+  <script>
+    L2Dwidget.init({
+      "model": {
+        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
+        "scale": 1
+      },
+      "display": {
+        "position": "right",//设置看板娘的上下左右位置
+        "width": 90,
+        "height": 120,
+        "hOffset": 0,
+        "vOffset": 0
+      },
+      "mobile": {
+        "show": true,
+        "scale": 0.5
+      },
+      "react": {
+        "opacityDefault": 10,//设置透明度
+        "opacityOnHover": 1
+      }
+    });
+    window.onload = function () {
+      $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.8; right: 100px; bottom: 0px; z-index: 1; pointer-events: none;")
+    }
+  </script>
+</div>
+
 <body class="bg">
-  <div class="box">
+  <div class="box" id="box" onmouseup="menu_back()">
     <div class="items">
       <div class="items-icon"><img src="images/head.png" /></div>
       <div class="items-con">你好呀!</div>
@@ -54,6 +82,12 @@
       </ul>
     </div>
   </div>
+  <div id="menu-button" style="display: none;" onclick="menu_show()">
+    <img src="images/menu-button.png" style="width: 35px;height: 35px; margin: 0 auto;">
+  </div>
+
+
+  <script src="js/blog.js"></script>
 
   <div class="tab_con">
     <div class="item" style="display: block;">
@@ -111,37 +145,6 @@
       </div>
     </div>
 
-    <div>
-      <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-      <script>
-        L2Dwidget.init({
-          "model": {
-            jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
-            "scale": 1
-          },
-          "display": {
-            "position": "right",//设置看板娘的上下左右位置
-            "width": 90,
-            "height": 120,
-            "hOffset": 0,
-            "vOffset": 0
-          },
-          "mobile": {
-            "show": true,
-            "scale": 0.5
-          },
-          "react": {
-            "opacityDefault": 10,//设置透明度
-            "opacityOnHover": 1
-          }
-        });
-        window.onload = function () {
-          $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.8; right: 100px; bottom: 0px; z-index: 1; pointer-events: none;")
-        }
-      </script>
-    </div>
-
     <div class="item">
       <div class="individual" id="individual">
         <div class="content">
@@ -150,7 +153,8 @@
             <hr />
             <div class="individual-div">
               <h2>
-                &nbsp&nbsp你好，我目前是一名高中生，理工男，一名电子发烧者和程序爱好者，喜欢书籍和音乐。喜欢享受孤独的村上春树、幽默留给自己的余华、物哀写尽的川端康成，我喜欢听抒情、电子和一点古典SamSmith、LinkinPark、ImagineDragons、milet...你知道<a href="https://www.bilibili.com/video/BV1Xb4y1W7Qn/">“林言林语”</a>么，读一读《红楼梦》吧。
+                &nbsp&nbsp你好，我目前是一名高中生，理工男，一名电子发烧者和程序爱好者，喜欢书籍和音乐。喜欢享受孤独的村上春树、幽默留给自己的余华、物哀写尽的川端康成，我喜欢听抒情、电子和一点古典SamSmith、LinkinPark、ImagineDragons、milet...你知道<a
+                  href="https://www.bilibili.com/video/BV1Xb4y1W7Qn/">“林言林语”</a>么，读一读《红楼梦》吧。
               </h2>
               <h2>
                 &nbsp&nbsp我个人学习近六年C语言，和四年的PYTHON，HTML开发近四年，这是我写的第三个网站。我是一名电子发爱好者，通过Arduino入门已有七年，学习过三年51MOS(STC89)，ESP32(esp8266,esp32dev)，STM32(stm32f103)，我已能够熟练开发大部分Arduino下atmega系列MCU，stm32f1系列MCU，能够独立完成项目包括部分PCB绘制设计。同时，个人学习过相当的linux，玩过树莓派和Ubuntu，本网站搭建在Ubuntu18系统上。
@@ -270,4 +274,4 @@
   <script src="js/tab.js"></script>
 </body>
 
-</html>
+</html
