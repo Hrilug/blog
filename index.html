@@ -9,42 +9,11 @@
   <meta name=“hrilug” content=“hrilug的博客” />
   <link rel="shortcut icon" href="images/html-head.png">
   <link href="css/blog.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/jquery-3.7.0.min.js"></script>
 
 </head>
-
-<div id="live">
-  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
-  <script>
-    L2Dwidget.init({
-      "model": {
-        jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",//这里改模型，前面后面都要改
-        "scale": 1
-      },
-      "display": {
-        "position": "right",//设置看板娘的上下左右位置
-        "width": 90,
-        "height": 120,
-        "hOffset": 0,
-        "vOffset": 0
-      },
-      "mobile": {
-        "show": true,
-        "scale": 0.5
-      },
-      "react": {
-        "opacityDefault": 10,//设置透明度
-        "opacityOnHover": 1
-      }
-    });
-    window.onload = function () {
-      $("#live2dcanvas").attr("style", "position: fixed; opacity: 0.8; right: 100px; bottom: 0px; z-index: 1; pointer-events: none;")
-    }
-  </script>
-</div>
-
 <body class="bg">
-  <div class="box" id="box" onmouseup="menu_back()">
+  <div class="box" id="box" onmouseup="menu_hide()">
     <div class="items">
       <div class="items-icon"><img src="images/head.png" /></div>
       <div class="items-con">你好呀!</div>
@@ -82,12 +51,12 @@
       </ul>
     </div>
   </div>
-  <div id="menu-button" style="display: none;" onclick="menu_show()">
-    <img src="images/menu-button.png" style="width: 35px;height: 35px; margin: 0 auto;">
+  <div id="menu-button" onclick="menu_show()">
+    <img src="images/menu-button.png" style="width: 36px;height: 36px;">
   </div>
 
 
-  <script src="js/blog.js"></script>
+  <script type="text/javascript" src="js/menu.js"></script>
 
   <div class="tab_con">
     <div class="item" style="display: block;">
@@ -137,7 +106,7 @@
               '林言林语：“早知他来，我就不来了。”',
               '林言林语：“我就知道，别人不挑剩下的也不给我。”',
               '林言林语：“今儿得罪了我事小，明儿什么宝姑娘来，什么贝姑娘来，都得罪了，这事岂不大了？”',
-              '林言林语：“你这该死的胡说！好好儿的把这淫词艳曲弄了来，说这些混话欺负我。我告诉舅舅舅母去。”',
+              '林言林语：“你这该死的胡说！好好儿的把这淫词艳曲弄了来，说这些混话欺负我。我告诉舅舅母去。”',
             ]
             document.getElementById('quoteDisplay').innerHTML = quotes[parseInt(Math.round(Math.random() * 18 + 1))];
           </script>
@@ -274,4 +243,4 @@
   <script src="js/tab.js"></script>
 </body>
 
-</html
+</html>
