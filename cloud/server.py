@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 '''
 将采用多线程模式进行主机和从机的数据交换处理
 完善bug报错的模式
@@ -24,10 +25,13 @@ class client(socket.socket):
               (self.name, self.port), "..................................\n")
 
     def tcp_connect(self):
+        if self.state:
+            self.sock.close()
         newsock, (remhost, remport) = self.sock.accept()    # 接收请求
         get_key = str(newsock.recv(1024).decode('UTF-8'))
         print('%s有一个连接请求 %s:%s' % (self.name, remhost, remport))
-        if (get_key == self.key):      # 添加连接
+
+        if get_key == self.key:      # 添加连接
             newsock.send("Succeed to connect.\n".encode('UTF-8'))
             print(f"{self.name}成功连接.\n")
             self.server = newsock
@@ -53,23 +57,22 @@ def host_tcp():
             data = slave_msg.get()
             print("slave发送接收到的信息%s\n" % data)
             host.server.send(data.encode('UTF-8'))
-
         else:
             host.server.setblocking(0)  # 更改为非阻塞模式避免在server.recv()步发生阻塞
-            while True:  # 循环接收，知道单次数据完成接受
+            while True:  # 循环接收，直到单次数据完成接受
                 try:
                     message = host.server.recv(1024)
-                    if message:
-                        time.sleep(0.001)
-                        host_msg.put(message.decode('UTF-8'))
-                        print("host发送消息:%s\n" % message.decode('UTF-8'))
-                    else:
-                        print("host掉线重连!\n")
-                        host.tcp_connect()
-                        break
-                except BlockingIOError as e:  # 如果没有数据则,退出循环
-                    break
-                except ConnectionResetError as e:
+                except:
+                    print("B")
+                    message=None
+                if message:
+                    print("A")
+                    time.sleep(0.001)
+                    host_msg.put(message.decode('UTF-8'))
+                    print("host发送消息:%s\n" % message.decode('UTF-8'))
+                else:
+                    print("host掉线重连!\n")
+                    host.tcp_connect()
                     break
             host.server.setblocking(1)  # 恢复阻塞模式,避免后续socket操作报错
 
@@ -82,23 +85,22 @@ def slave_tcp():
             data = host_msg.get()
             print("host发送接收到的信息%s\n" % data)
             slave.server.send(data.encode('UTF-8'))
-
         else:
             slave.server.setblocking(0)  # 更改为非阻塞模式避免在server.recv()步发生阻塞
             while True:  # 循环接收，知道单次数据完成接受
                 try:
                     message = slave.server.recv(1024)
-                    if message:
-                        time.sleep(0.001)
-                        slave_msg.put(message.decode('UTF-8'))
-                        print("slave发送消息:%s\n" % message.decode('UTF-8'))
-                    else:
-                        print("slave掉线重连!\n")
-                        slave.tcp_connect()
-                        break
-                except BlockingIOError as e:  # 如果没有数据则,退出循环
+                except BlockingIOError:
+                    print("slave连接掉线0！")
+                    slave.tcp_connect()
                     break
-                except ConnectionResetError as e:
+                if message:
+                    time.sleep(0.001)
+                    slave_msg.put(message.decode('UTF-8'))
+                    print("slave发送消息:%s\n" % message.decode('UTF-8'))
+                else:
+                    print("slave掉线重连!\n")
+                    slave.tcp_connect()
                     break
 
             slave.server.setblocking(1)  # 恢复阻塞模式,避免后续socket操作报错
