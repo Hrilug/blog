@@ -175,6 +175,11 @@
     float: left;
 }
 
+.cpp a div img{
+    width: 120px;
+    height: 120px;
+}
+
 .cpp a div:hover {
     width: 150px;
     height: 150px;

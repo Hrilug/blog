@@ -15,9 +15,10 @@ function init() {
     }
     else {
         console.log("this is a mobile device");
-        //document.getElementById("box").style.display = "hidden";
-        //$("#box").width=0;
+        document.getElementById("box").style.display = "hidden";
         $("#menu-button").show();
+        $(".cpp a div").css({"margin":"10px","width":"130px","height":"130px"});
+        $(".cpp a div img").css({"width":"100px","height":"100px"});
     }
 }
 
